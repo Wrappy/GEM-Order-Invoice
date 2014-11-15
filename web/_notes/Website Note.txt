@@ -1,0 +1,17 @@
+Versioning of Website:
+----------------------
+
+version 1.0: 3 pages, layout structure ready, controls included on one page
+
+
+
+
+
+
+
+ToDo's:
+-------
+
+* Clean up HTML code and CSS naming
+* Add controls to pages
+* Adjust layouts to match client screens
