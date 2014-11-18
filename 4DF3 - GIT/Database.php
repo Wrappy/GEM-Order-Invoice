@@ -25,5 +25,14 @@
 			$message = "success";
 			return true;
 		}
+		
+		public function getResults(/*string*/ $query) {
+			$connect = $this->loginDatabase();
+			$sql = $query;
+			
+			$result = mysqli_query($con,"SELECT * FROM user WHERE userID='$username'");
+			$row = mysqli_fetch_array($result);	
+			return $row;
+		}
 	}
 ?>
