@@ -99,5 +99,10 @@
 			$message = "1 record added";
 			return true;
 		}
+		
+		function createSession(/*string*/ $username) {
+			$_SESSION['Login'] = 1;
+			$_SESSION['User'] = $username;	
+		}
 	}
 ?>
