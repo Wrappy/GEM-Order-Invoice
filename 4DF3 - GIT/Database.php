@@ -34,5 +34,19 @@
 			$row = mysqli_fetch_array($result);	
 			return $row;
 		}
+		
+		function getAccount(/*string*/ $username) {
+			
+			$connect = $this->loginDatabase();
+			$sql = "SELECT * FROM user WHERE userID='$username'";
+			$result = mysqli_query($con,$query);
+			
+			return $result;
+		}
+		
+		function getUsers() {
+			$connect = $this->loginDatabase();
+			$sql = "SELECT username FROM user'";
+		}	
 	}
 ?>

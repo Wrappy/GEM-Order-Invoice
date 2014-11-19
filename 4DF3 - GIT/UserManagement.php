@@ -24,7 +24,6 @@
 			return $message;
 		}
 		
-		
 
 		function verifyPassword(/*string*/ $username, /*string*/ $password) {
 			
