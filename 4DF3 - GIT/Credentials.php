@@ -1,5 +1,6 @@
 <?php
 
+	include_once 'UserManagement.php';
 	class Credentials {
 		
 		private $salt = "newsalt";
@@ -12,20 +13,17 @@
 		}
 		
 		public function login(/*string*/$username, /*string*/$password) {
-			
-			
+						
 			//verify password, if true create session
 			$userManagement = new UserManagement;
 			if ($userManagement->verifyPassword($username, $password)) {
 				$userManagement->createSession($username);
-				return $true;
+				return true;
 			}
 			else {
-				return $false;
-			}
-				
-			
-			
+				return false;
+			}			
 		}
 	}
+	
 ?>

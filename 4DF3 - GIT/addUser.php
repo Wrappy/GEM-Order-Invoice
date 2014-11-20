@@ -1,10 +1,10 @@
 <?php
 	include_once 'UserManagement.php';
-	/*$username = $_POST['username'];
+	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
-	$address1 = $_POST['address1'];
+	/*$address1 = $_POST['address1'];
 	$address2 = $_POST['address2'];
 	$city = $_POST['city'];
 	$prov = $_POST['prov'];
@@ -12,7 +12,7 @@
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];
 	$type = $_POST['type'];
-	$active = $_POST['active'];*/
+	$active = $_POST['active'];
 	
 	$username = "TestUser";
 	$password = "testtest";
@@ -26,7 +26,7 @@
 	$phone = "";
 	$email = "";
 	$type = "";
-	$active = "";
+	$active = "";*/
 	
 	
 	$addNewUser = new UserManagement;

@@ -1,4 +1,5 @@
 <?php
+
 	include_once 'UserManagement.php';
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -12,4 +13,5 @@
 	else {
 		//password is invalid
 	}
+	
 ?>

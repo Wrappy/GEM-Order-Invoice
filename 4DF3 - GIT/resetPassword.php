@@ -10,7 +10,6 @@
 			if ($this->checkUsername($this->$username)) {
 			}
 			else { return $false; }
-			
 		}
 		
 		protected function checkUsername(/*string*/ $user) {
@@ -27,7 +26,7 @@
 			else {
 				$email = $result['email'];
 				$this->emailUser($this->username, $email);
-				return $true; 
+				return $true;
 			}
 		}
 		

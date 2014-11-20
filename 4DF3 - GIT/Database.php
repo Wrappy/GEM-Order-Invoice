@@ -2,10 +2,10 @@
 	class Database {
 		
 		//variables, can be changed
-		private $username = "x"; //username
-		private $password = "x"; //password
-		private $ip = "x"; //mySQL IP
-		private $table = "x"; //table name
+		private $username = "4fd3"; //username
+		private $password = "password"; //password
+		private $ip = "127.0.0.1"; //mySQL IP
+		private $table = "4fd3"; //table name
 		
 		//login to database
 		public function loginDatabase() {
@@ -14,12 +14,12 @@
 		}
 		
 		public function queryDatabase(/*string*/ $query) {
-			$connect = $this->loginDatabase();
+			$con = $this->loginDatabase();
 			$sql = $query;
 			
-			if (!mysqli_query($connect,$sql))
+			if (!mysqli_query($con,$sql))
 			{
-				$message = 'Error: ' . mysqli_error($connect);
+				$message = 'Error: ' . mysqli_error($con);
 				return false;
 			}
 			$message = "success";
@@ -27,17 +27,17 @@
 		}
 		
 		public function getResults(/*string*/ $query) {
-			$connect = $this->loginDatabase();
+			$con = $this->loginDatabase();
 			$sql = $query;
 			
-			$result = mysqli_query($con,"SELECT * FROM user WHERE userID='$username'");
+			$result = mysqli_query($con,$query);
 			$row = mysqli_fetch_array($result);	
 			return $row;
 		}
 		
 		function getAccount(/*string*/ $username) {
 			
-			$connect = $this->loginDatabase();
+			$con = $this->loginDatabase();
 			$sql = "SELECT * FROM user WHERE userID='$username'";
 			$result = mysqli_query($con,$query);
 			
@@ -45,7 +45,7 @@
 		}
 		
 		function getUsers() {
-			$connect = $this->loginDatabase();
+			$con = $this->loginDatabase();
 			$sql = "SELECT username FROM user'";
 		}	
 	}
