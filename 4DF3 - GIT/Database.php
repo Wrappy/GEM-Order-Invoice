@@ -38,7 +38,7 @@
 		function getAccount(/*string*/ $username) {
 			
 			$con = $this->loginDatabase();
-			$sql = "SELECT * FROM user WHERE userID='$username'";
+			$query = "SELECT * FROM user WHERE userID='$username'";
 			$result = mysqli_query($con,$query);
 			
 			return $result;
