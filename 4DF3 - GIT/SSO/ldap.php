@@ -28,6 +28,17 @@
 				return $info;
 			}
 		}
+
+		public function validateUser(/*string*/ $username, /*string*/ $password) {
+			$connect = $this->connectLdap();
+			$bind = ldap_bind($connect,$username,$password);
+			if ($bind) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
 		public function addUser(/*resource*/ $info) {
 			include_once "UserManagement.php";
 			$userManagement = new UserManagement;
@@ -59,10 +70,10 @@
 		}
 	}
 
-	$test = new Ldap;
+	/*$test = new Ldap;
 	$connect = $test->connectLdap();
 	$test->bindLdap($connect);
 	$result = $test->checkUser($connect);
-	$test->findUser($result);	
+	$test->findUser($result);	*/
 	
 ?>
