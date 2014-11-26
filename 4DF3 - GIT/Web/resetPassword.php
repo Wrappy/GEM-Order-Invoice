@@ -34,7 +34,9 @@
 			$message = "Testing email";
 			$to = $email;
 			$subject = "Testing Email!";
-			$from = "test@aethnet.com";
+			$headers = 'From: test@aethnet.com' . "\r\n";
+			
+			mail($to,$subject,$message,$headers);
 		}
 		
 		protected function generateCode(/*string*/ $username) {
