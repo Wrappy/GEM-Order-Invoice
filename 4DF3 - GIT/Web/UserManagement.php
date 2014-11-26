@@ -103,6 +103,7 @@
 			session_start();
 			$_SESSION['login'] = 1;
 			$_SESSION['user'] = $username;
+			$_SESSION['admin'] = 1;
 		}
 	}
 ?>

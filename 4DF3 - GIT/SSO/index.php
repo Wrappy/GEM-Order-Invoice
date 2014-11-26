@@ -14,5 +14,13 @@
 	$userManagement->createSession($username);
 	
 	//redirect to menu
-	header("location: /CSE/Mainmenu.jsp");	
+	$login = $_SESSION['login'];
+	$username = $_SESSION['username'];
+	$admin = $_SESSION['admin'];
+	echo '<body onload="document.myform.submit()">';
+	echo '<form name="myform" action="Mainmenu.jsp" method="POST">';
+	echo "<input type=\"hidden\" name=\"login\" value=\"$login\">";
+	echo "<input type=\"hidden\" name=\"login\" value=\"$username\">";
+	echo "<input type=\"hidden\" name=\"login\" value=\"$admin\">";
+	//header("location: /CSE/Mainmenu.jsp");	
 ?>
