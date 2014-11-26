@@ -31,11 +31,11 @@
 				echo "Hi";
 			}
 			
-			//$username = $_POST['username'];
-			//$password = $_POST['password'];
-			$username = "TestUser";
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			//$username = "TestUser";
 			
-			$password = "testtest";
+			//$password = "testtest";
 			$login = new Credentials();
 			if ($login->login($username, $password)){
 			
@@ -57,7 +57,9 @@
 			}
 			
 			else {
-			 echo "Wrong username or Password";
+			 	if (isset($_POST['username'])) {
+			 	echo "Wrong username or Password";
+			 	}
 			}
       	?>
       </form>

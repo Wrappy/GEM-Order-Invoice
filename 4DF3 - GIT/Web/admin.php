@@ -38,16 +38,24 @@
 				$row = $database->getResults($query);
 				$fname = $row['fname'];
 				$lname = $row['lname'];
+				$address1 = $row['address1'];
+				$address2 = $row['address2'];
+				$city = $row['city'];
+				$prov = $row['prov'];
+				$postal = $row['postal'];
+				$phone = $row['phone'];
+				$email = $row['email'];
+				$type = $row['type'];
 			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">First Name: </label></td><td><input type=\"text\" value=\"$fname\"></td></tr>";
 				echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Last Name: </label></td><td><input type=\"text\" value=\"$lname\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Address 1: </label></td><td><input type=\"text\" ></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Address 2: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">City: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Province: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Postal Code: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Email: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Phone Number: </label></td><td><input type=\"text\"></td></tr>";
-			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">User Type: </label></td><td><input type=\"text\"></td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Address 1: </label></td><td><input type=\"text\" > value=\"$address1\"</td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Address 2: </label></td><td><input type=\"text\"> value=\"$address2\"</td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">City: </label></td><td><input type=\"text\"></td> value=\"$city\"</tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Province: </label></td><td><input type=\"text\"> value=\"$prov\"</td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Postal Code: </label></td><td><input type=\"text\"> value=\"$postal\"</td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Email: </label></td><td><input type=\"text\"></td> value=\"$phone\"</tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">Phone Number: </label></td><td><input type=\"text\"> value=\"$email\"</td></tr>";
+			    echo "<tr><td align=\"right\"><label class=\"field\" for=\"Name\">User Type: </label></td><td><input type=\"text\"> value=\"$type\"</td></tr>";
 			    }	    
 		}
 
